@@ -6,9 +6,9 @@ public class Company {
 	private ArrayList<Car> carList = new ArrayList<Car>();
 	
 	private static Company instance = new Company();
-
-	private Company(){}
 	
+	//싱글톤
+	private Company(){}
 	public static Company getInstance(){
 		if(instance == null){
 			instance = new Company();
