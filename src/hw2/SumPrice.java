@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class SumPrice {
 	//별도의 계산을 위한 클래스
-	Company company;
+	private Company company;
 	
 	public SumPrice(Company company) {
 		this.company = company;
