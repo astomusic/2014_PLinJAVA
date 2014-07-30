@@ -15,16 +15,16 @@ public class Main {
 		
 		Iterator<Student> i = next.getStudents().iterator();
 		
-		Strategy st; 
+		Strategy strategy; 
 		
 		while(i.hasNext()){
 			Student student = i.next();
 			if(student.getMajor().equals("math")) {
-				st = new StrategyForMath();
-				st.calculateScore(student);
+				strategy = new StrategyForMath();
+				strategy.calculateScore(student);
 			} else if(student.getMajor().equals("eng")) {
-				st = new StrategyForEng();
-				st.calculateScore(student);
+				strategy = new StrategyForEng();
+				strategy.calculateScore(student);
 			}
 			System.out.println(student);
 		}
