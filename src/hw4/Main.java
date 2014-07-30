@@ -19,6 +19,7 @@ public class Main {
 		
 		while(i.hasNext()){
 			Student student = i.next();
+			System.out.println(student);
 			if(student.getMajor().equals("math")) {
 				strategy = new StrategyForMath();
 				strategy.calculateScore(student);
