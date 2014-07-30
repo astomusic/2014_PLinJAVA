@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
 		Academy next = new Academy();
 		
 		next.addStudent(new Student("이승기", "141213", "math", 95, 20));
@@ -15,15 +15,16 @@ public class Main {
 		
 		Iterator<Student> i = next.getStudents().iterator();
 		
-		Strategy forMath = new StrategyForMath();
-		Strategy forEng = new StrategyForEng();
+		Strategy st; 
 		
 		while(i.hasNext()){
 			Student student = i.next();
 			if(student.getMajor().equals("math")) {
-				forMath.calculateScore(student);
+				st = new StrategyForMath();
+				st.calculateScore(student);
 			} else if(student.getMajor().equals("eng")) {
-				forEng.calculateScore(student);
+				st = new StrategyForEng();
+				st.calculateScore(student);
 			}
 			System.out.println(student);
 		}
